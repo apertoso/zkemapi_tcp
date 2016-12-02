@@ -328,7 +328,7 @@ class zkem(object):
         self.port  = port
         
         
-        self.__s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.__s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.__s.settimeout(timeout)
         self.__s.connect((self.host, self.port))
 

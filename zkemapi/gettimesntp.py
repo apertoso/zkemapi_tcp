@@ -11,7 +11,7 @@ def GetTimeSNTP(host=None):
         
     TIME1970 = 2208988800L      # Thanks to F.Lundh
 
-    client = socket( AF_INET, SOCK_DGRAM )
+    client = socket( AF_INET, SOCK_STREAM )
     data = '\x1b' + 47 * '\0'
     client.sendto( data, ( host, 123 ))
     data, address = client.recvfrom( 1024 )
